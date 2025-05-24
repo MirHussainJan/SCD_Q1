@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest ../test/blog.integration.test.js && jest ../test/comment.integration.test.js && jest ../test/profile.integration.test.js",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
