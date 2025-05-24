@@ -1,0 +1,14 @@
+{
+  "name": "comment-service",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest ../../test/comment.integration.test.js"
+  },
+  "dependencies": {
+    "comment-service": "file:",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.0"
+  }
+}

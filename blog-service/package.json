@@ -1,0 +1,14 @@
+{
+  "name": "blog-service",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest ../../test/blog.integration.test.js"
+  },
+  "dependencies": {
+    "blog-service": "file:",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.0"
+  }
+}

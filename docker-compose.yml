@@ -1,0 +1,53 @@
+version: '3.8'
+services:
+  auth-service:
+    build: ./auth-service
+    ports:
+      - "4001:4001"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - JWT_SECRET=${JWT_SECRET}
+    depends_on:
+      - mongo
+  blog-service:
+    build: ./blog-service
+    ports:
+      - "4002:4002"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+    depends_on:
+      - mongo
+  comment-service:
+    build: ./comment-service
+    ports:
+      - "4003:4003"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+    depends_on:
+      - mongo
+  profile-service:
+    build: ./profile-service
+    ports:
+      - "4004:4004"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+    depends_on:
+      - mongo
+  api-gateway:
+    build: ./api-gateway
+    ports:
+      - "4000:4000"
+    depends_on:
+      - auth-service
+      - blog-service
+      - comment-service
+      - profile-service
+  mongo:
+    image: mongo:6.0
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+volumes:
+  mongo-data:

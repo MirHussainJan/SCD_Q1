@@ -1,0 +1,14 @@
+{
+  "name": "profile-service",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest ../../test/profile.integration.test.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.0",
+    "profile-service": "file:"
+  }
+}
