@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "jest ../../test/profile.integration.test.js"
+    "test": "jest ../test/profile.integration.test.js"
   },
   "dependencies": {
     "express": "^4.18.2",

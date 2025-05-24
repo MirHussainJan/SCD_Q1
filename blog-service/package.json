@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "jest ../../test/blog.integration.test.js"
+    "test": "jest ../test/blog.integration.test.js"
   },
   "dependencies": {
     "blog-service": "file:",
